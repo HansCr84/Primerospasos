@@ -1,0 +1,53 @@
+import random
+
+def jugada_user():
+    while True:
+        jugada = input ("Elige piedra, papel o tijera, salir : ")
+
+        if jugada in ['piedra', 'papel', 'tijera', 'salir']:
+            return jugada
+        else:
+            print("Jugada No Valida, Elije de Nuevo")
+
+def jugada_pc():
+    opciones = ['piedra', 'papel', 'tijera']
+    return random.choice(opciones)
+
+def det_win(jugada_1,jugada_2):
+    if jugada_1 == "salir":
+        print ("Gracias por participar, Hasta Luego")
+        return None
+    
+    print (f"Tu elegiste: {jugada_1}")
+    print (f"La computadora eligio: {jugada_2}")
+
+    if jugada_1 == jugada_2:
+        print("Es un empate")
+
+    elif (jugada_1 == 'piedra' and jugada_2 == 'tijera') or \
+            (jugada_1 == 'papel' and jugada_2 == 'piedra') or  \
+            (jugada_1 == 'tijera' and jugada_2 == 'papel'):
+            print ("Ganaste!!")
+
+    else: 
+        print ("Gano la Computadora")
+
+def play_game():
+    print("Bienvenido al juego de Piedra, Papel o Tijeras.")
+    while True:
+        jugada_1 = jugada_user()
+        jugada_2 = jugada_pc()
+        det_win(jugada_1,jugada_2)
+
+        if jugada_1 == 'salir':
+            break
+
+if __name__ ==  "__main__":
+    play_game()
+
+
+#Comentario para validar cambiso en git
+
+
+
+ 
