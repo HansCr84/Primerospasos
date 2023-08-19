@@ -15,7 +15,7 @@ def jugada_compu():
 
 def det_win(jugada_1,jugada_2):
     if jugada_1 == "salir":
-        print ("Gracias por participar, Hasta Luego")
+        print ("Gracias por existir, Hasta Luego")
         return None
     
     print (f"Tu elegiste: {jugada_1}")
@@ -42,8 +42,8 @@ def play_game():
         if jugada_1 == 'salir':
             break
 
-if __name__ ==  "__main__":
-    play_game()
+
+play_game()
 
 
 #Comentario para validar cambiso en git
