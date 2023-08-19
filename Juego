@@ -1,6 +1,6 @@
 import random
 
-def jugada_user():
+def jugada_u():
     while True:
         jugada = input ("Elige piedra, papel o tijera, salir : ")
 
@@ -9,7 +9,7 @@ def jugada_user():
         else:
             print("Jugada No Valida, Elije de Nuevo")
 
-def jugada_pc():
+def jugada_compu():
     opciones = ['piedra', 'papel', 'tijera']
     return random.choice(opciones)
 
@@ -33,10 +33,10 @@ def det_win(jugada_1,jugada_2):
         print ("Gano la Computadora")
 
 def play_game():
-    print("Bienvenido al juego de Piedra, Papel o Tijeras.")
+    print("Bienvenido al juego de Piedra, Papel o Tijeras. : Inmundo Animal ")
     while True:
-        jugada_1 = jugada_user()
-        jugada_2 = jugada_pc()
+        jugada_1 = jugada_u()
+        jugada_2 = jugada_compu()
         det_win(jugada_1,jugada_2)
 
         if jugada_1 == 'salir':
@@ -47,6 +47,8 @@ if __name__ ==  "__main__":
 
 
 #Comentario para validar cambiso en git
+
+
 
 
 
